@@ -10,6 +10,8 @@ public class PersonMain {
 		ApplicationContext applicationContext = new ClassPathXmlApplicationContext("applicationContext-setter2.xml");
 		
 		System.out.println(applicationContext.getBean(Person.class));
+		
+		((ClassPathXmlApplicationContext) applicationContext).close();
 
 	}
 

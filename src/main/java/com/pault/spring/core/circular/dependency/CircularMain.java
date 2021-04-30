@@ -17,7 +17,7 @@ public class CircularMain {
 		applicationContext.getBean(Department.class);
 		
 				
-		
+		((ClassPathXmlApplicationContext) applicationContext).close();
 
 	}
 

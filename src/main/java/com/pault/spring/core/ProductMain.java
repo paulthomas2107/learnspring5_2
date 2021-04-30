@@ -19,6 +19,8 @@ public class ProductMain {
 		// Use Bean
 		System.out.println(product1);
 		System.out.println(product2);
+		
+		((ClassPathXmlApplicationContext) applicationContext).close();
 	
 		
 	}

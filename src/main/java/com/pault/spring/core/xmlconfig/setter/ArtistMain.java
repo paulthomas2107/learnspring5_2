@@ -12,6 +12,7 @@ public class ArtistMain {
 		
 		System.out.println(applicationContext.getBean(Artist.class));
 
+		((ClassPathXmlApplicationContext) applicationContext).close();
 	}
 
 }

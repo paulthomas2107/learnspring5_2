@@ -14,6 +14,7 @@ public class Main {
 		ApplicationContext applicationContext = new ClassPathXmlApplicationContext("applicationContext-innerbean.xml");		
 		System.out.println(applicationContext.getBean(Artist.class));
 		
+		((ClassPathXmlApplicationContext) applicationContext).close();
 		
 
 	}
