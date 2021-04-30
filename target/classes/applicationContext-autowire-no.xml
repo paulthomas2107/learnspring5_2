@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+	
+	
+	<bean id="person" class="com.pault.spring.core.autowire.no.Person">
+		<property name="id" value="A123" />
+		<property name="name" value="Mr Thomas" />
+		<property name="address" ref="address" />
+	</bean>
+	
+	<bean id="address" class="com.pault.spring.core.autowire.no.Address">
+		<property name="unitName" value="Unit 511" />
+		<property name="street" value="Melbourne Rd" />
+		<property name="area" value="London" />
+		<property name="pin" value="7653" />
+	</bean>
+	
+</beans>

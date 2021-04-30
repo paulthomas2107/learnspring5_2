@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+	
+	<bean id="product1" class="com.pault.spring.core.Product">
+		<constructor-arg name="productId" value="A-123" />
+		<constructor-arg name="productName" value="Laptop" />
+		<constructor-arg name="productDesc" value="Some Laptop" />
+	</bean>
+	
+	<bean id="product2" class="com.pault.spring.core.Product">
+		<constructor-arg name="productId" value="B-123" />
+		<constructor-arg name="productName" value="Mobile" />
+		<constructor-arg name="productDesc" value="Some Mobile" />
+	</bean>
+
+
+</beans>

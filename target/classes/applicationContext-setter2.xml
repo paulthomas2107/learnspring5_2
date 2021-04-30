@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	  
+	<bean id="person" class="com.pault.spring.core.bean.collaboration.Person">
+		<property name="id" value="1" />
+		<property name="firstName" value="The Cat" />
+		<property name="lastName" value="Thomas" />
+		<property name="address" ref="address"/>
+		
+	</bean>
+	
+	<bean id="address" class="com.pault.spring.core.bean.collaboration.Address">
+		<property name="unitName" value="Unit 67" />
+		<property name="street" value="Street 67"/>
+		<property name="area" value="Area 67"/>
+		<property name="pin" value="167" />
+	</bean>
+
+</beans>
+

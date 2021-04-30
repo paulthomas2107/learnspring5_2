@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<!--  
+	<bean id="person" class="com.pault.spring.core.xmlconfig.constructor.Person">
+		<constructor-arg name="id" value="1" />
+		<constructor-arg name="firstName" value="Rory" />
+		<constructor-arg name="lastName" value="Thomas" />
+	</bean>
+	-->
+	
+	<!-- 
+	<bean id="person" class="com.pault.spring.core.xmlconfig.constructor.Person">
+		<constructor-arg index="0" value="1" />
+		<constructor-arg index="1" value="Rory" />
+		<constructor-arg index="2" value="Thomas" />
+	</bean>
+	 -->
+	  
+	<bean id="person" class="com.pault.spring.core.xmlconfig.constructor.Person">
+		<constructor-arg type="int" value="1" />
+		<constructor-arg type="java.lang.String" value="Rory" />
+		<constructor-arg type="java.lang.String" value="Thomas" />
+	</bean>
+	
+
+</beans>
