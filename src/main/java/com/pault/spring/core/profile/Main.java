@@ -11,7 +11,7 @@ public class Main {
 		AnnotationConfigApplicationContext appContext = new AnnotationConfigApplicationContext();
 		
 		//appContext.getEnvironment().setActiveProfiles("Dev");
-		// appContext.getEnvironment().setDefaultProfiles("Test");
+		appContext.getEnvironment().setDefaultProfiles("Test");
 		// -Dspring.profiles.active=Test ---> Can be set in arguments
 		
 		appContext.scan("com.pault.spring.core.profile");
