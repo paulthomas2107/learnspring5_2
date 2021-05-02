@@ -40,6 +40,11 @@ public class AwareConfiguration {
 		return messageSource;
 		
 	}
+	
+	@Bean
+	public CustomResourceLoader customResourceLoader() {
+		return new CustomResourceLoader();
+	}
 }
 	
 
