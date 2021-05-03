@@ -8,7 +8,11 @@ public class Main {
 		
 		AnnotationConfigApplicationContext appContext =  new AnnotationConfigApplicationContext(MessageConfiguration.class);
 		
-		appContext.getBean(MessagePublisher.class).publishMessage();
+		//appContext.getBean(MessagePublisher.class).publishMessage();
+		
+		appContext.start();
+		appContext.stop();
+		appContext.close();
 		
 		//appContext.close();
 		

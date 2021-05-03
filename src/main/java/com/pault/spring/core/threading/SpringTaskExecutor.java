@@ -21,8 +21,8 @@ public class SpringTaskExecutor {
 	
 	public void doExecute(Runnable task) {
 		simpleAsyncTaskExecutor.execute(task);
-		//syncTaskExecutor.execute(task);
-		//taskExecutorAdapter.execute(task);
+		syncTaskExecutor.execute(task);
+		taskExecutorAdapter.execute(task);
 	}
 		
 	

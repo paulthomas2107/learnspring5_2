@@ -3,8 +3,7 @@ package com.pault.spring.core.threading;
 import java.util.concurrent.Callable;
 import java.util.concurrent.ExecutionException;
 import java.util.concurrent.Executor;
-import java.util.concurrent.Executors;
-import java.util.concurrent.Future;
+
 
 public class ThreadingBasics {
 	

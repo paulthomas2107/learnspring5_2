@@ -1,6 +1,5 @@
 package com.pault.spring.core.threading;
 
-import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 import java.util.concurrent.ScheduledExecutorService;
 import java.util.concurrent.TimeUnit;
@@ -9,8 +8,9 @@ public class ThreadPool {
 
 	public static void main(String[] args) {
 		
-		ExecutorService fixedThreadPool = Executors.newFixedThreadPool(3);
 		/*
+		ExecutorService fixedThreadPool = Executors.newFixedThreadPool(3);
+		
 		fixedThreadPool.submit(new ThreadingBasics.MyRunnable());
 		fixedThreadPool.submit(new ThreadingBasics.MyRunnable());
 		fixedThreadPool.submit(new ThreadingBasics.MyRunnable());
@@ -18,8 +18,9 @@ public class ThreadPool {
 		fixedThreadPool.submit(new ThreadingBasics.MyRunnable());
 		*/
 			
-		ExecutorService cachedThreadPool = Executors.newCachedThreadPool();
 		/*
+		ExecutorService cachedThreadPool = Executors.newCachedThreadPool();
+		
 		cachedThreadPool.submit(new ThreadPool.MyRunnable());
 		cachedThreadPool.submit(new ThreadPool.MyRunnable());
 		cachedThreadPool.submit(new ThreadPool.MyRunnable());
@@ -32,8 +33,9 @@ public class ThreadPool {
 		*/
 		
 	
-		ExecutorService singleThreadExector = Executors.newSingleThreadExecutor();
 		/*
+		ExecutorService singleThreadExector = Executors.newSingleThreadExecutor();
+		
 		singleThreadExector.submit(new ThreadPool.MyRunnable());
 		singleThreadExector.submit(new ThreadPool.MyRunnable());
 		*/
