@@ -10,6 +10,8 @@ public class Main {
 		
 		appContext.getBean(MessagePublisher.class).publishMessage();
 		
+		//appContext.close();
+		
 	}
 
 }

@@ -5,14 +5,16 @@ import java.util.Map;
 import java.util.Random;
 import java.util.concurrent.TimeUnit;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.ApplicationEventPublisher;
 import org.springframework.context.ApplicationEventPublisherAware;
 import org.springframework.core.task.SimpleAsyncTaskExecutor;
 import org.springframework.stereotype.Component;
 
 @Component
-public class MessagePublisher implements ApplicationEventPublisherAware {
+public class MessagePublisher { //implements ApplicationEventPublisherAware {
 
+	@Autowired
 	private ApplicationEventPublisher applicationEventPublisher;
 	
 	private static Map<Integer, String> messages = new HashMap<>();
@@ -25,10 +27,10 @@ public class MessagePublisher implements ApplicationEventPublisherAware {
 		messages.put(5, "Sample Message 5");
 	}
 	
-	@Override
-	public void setApplicationEventPublisher(ApplicationEventPublisher applicationEventPublisher) {
-		this.applicationEventPublisher = applicationEventPublisher;
-	}
+	// @Override
+	//public void setApplicationEventPublisher(ApplicationEventPublisher applicationEventPublisher) {
+	//	this.applicationEventPublisher = applicationEventPublisher;
+	// }
 
 	public void publishMessage() {
 		
@@ -39,7 +41,9 @@ public class MessagePublisher implements ApplicationEventPublisherAware {
 				for (int i = 0; i < 5; i++) {
 					int id = new Random().nextInt(5);
 					MessageEvent messageEvent = new MessageEvent(messages.get(++id));
+					DateTimeEvent dateTimeEvent = new DateTimeEvent("Some DateTime Event");
 					applicationEventPublisher.publishEvent(messageEvent);
+					applicationEventPublisher.publishEvent(dateTimeEvent);
 					TimeUnit.SECONDS.sleep(2);
 					
 				}
